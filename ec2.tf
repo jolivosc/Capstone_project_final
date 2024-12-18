@@ -20,7 +20,7 @@ data "aws_ami" "latest_linux_ami" {
 
 resource "aws_instance" "instance" {
   #ami                         = data.aws_ami.latest_linux_ami.id
-  ami = var.AMIs[var.AWS_REGION]
+  ami = "ami-061dd8b45bc7deb3d"
   instance_type               = "t3.micro"
   availability_zone           = "us-west-2a"
   associate_public_ip_address = true
